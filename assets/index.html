@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEDRO | Profile</title>
+
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <!-- LIBRARIES CONNECT -->
+  <!-- JQuery -->
+  <script defer src="lib/jquery/jquery-3.6.0.js"></script>
+
+  <!-- Bootstrap-grid -->
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-grid.css">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="lib/owlcarousel2/css/owl.carousel.css">
+  <script defer src="lib/owlcarousel2/js/owl.carousel.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- Main JS -->
+  <script defer src="js/common.js"></script>
+
+  <!-- Phone validator -->
+  <script defer src="lib/digitalize-phoneinput/phoneinput.js"></script>
+
+</head>
+
+
+<body class="scrollStopper js-scrollArea">
+  <div class="site">
+
+    <header class="site__header">
+      <div class="siteHeader__itemsSet container d-flex align-items-center justify-content-between">
+
+        <a href="" class="siteHeader__item siteHeader__logoBox">
+          <svg class="siteHeader__logoImage ui-logo" height="32" width="91">
+            <use xlink:href="images/logo.svg#headerLogo"></use>
+          </svg>
+        </a>
+
+        <nav class="siteHeader__item siteHeader__menu d-none d-xl-flex">
+          <a href="javascript:void(0);/#" class="siteHeader__menuItem" title="пункт меню - пигменты">
+            Пигменты
+            <svg class="ui-icon" height="16" width="16">
+              <use xlink:href="images/icons/b-arrow.svg#icon-bArrow"></use>
+            </svg>
+          </a>
+          <a href="javascript:void(0);/#”" class="siteHeader__menuItem" title="пункт меню - товары для ПМ">
+            Товары для ПМ
+            <svg class="ui-icon" height="16" width="16">
+              <use xlink:href="images/icons/b-arrow.svg#icon-bArrow"></use>
+            </svg>
+          </a>
+          <a href="javascript:void(0);/#" class="siteHeader__menuItem" title="пункт меню - ремувер">
+            Ремувер
+          </a>
+          <a href="javascript:void(0);/#" class="siteHeader__menuItem" title="пункт меню - акции">
+            Акции
+          </a>
+          <a href="javascript:void(0);/#" class="siteHeader__menuItem" title="пункт меню - обучение">
+            Обучение
+          </a>
+        </nav>
+
+        <nav class="siteHeader__item siteHeader__navbar">
+
+          <a href="tel:88005000171" class="siteNav__item siteNav__item--phone d-none d-sm-inline-flex"
+            title="телефон для справки и заказов">
+            <svg class="ui-icon" height="24" width="24">
+              <use xlink:href="images/icons/phone.svg#icon-phone"></use>
+            </svg>
+            8 (800) 500-01-71
+          </a>
+
+          <div class="siteHeader__controls siteNav__item">
+            <button class="siteHeader__controlItem" title="поиск">
+              <svg class="ui-icon" height="24" width="24">
+                <use xlink:href="images/icons/search.svg#icon-search"></use>
+              </svg>
+            </button>
+
+            <a href="javascript:void(0);/#" class="siteHeader__controlItem" title="избранное">
+              <svg class="ui-icon" height="24" width="24">
+                <use xlink:href="images/icons/favorits.svg#icon-favorits"></use>
+              </svg>
+              <div class="controlItem__badge">
+                <span class="controlItem__value">
+                  999
+                </span>
+              </div>
+            </a>
+
+            <a href="javascript:void(0);/#" class="siteHeader__controlItem" title="корзина товаров">
+              <svg class="ui-icon" height="24" width="24">
+                <use xlink:href="images/icons/bag.svg#icon-bag"></use>
+              </svg>
+              <div class="controlItem__badge">
+                <span class="controlItem__value">
+                  99
+                </span>
+              </div>
+            </a>
+
+            <a href="javascript:void(0);/#" class="siteHeader__controlItem" title="профиль">
+              <svg class="ui-icon" height="24" width="24">
+                <use xlink:href="images/icons/profile.svg#icon-profile"></use>
+              </svg>
+            </a>
+
+          </div>
+
+          <button class="siteNav__item siteNav__item--menu siteHeader__controlItem js-menuTrigger" title="меню">
+            <!-- <div class="menuButton active"> -->
+            <span class="menuLine"></span>
+            <span class="menuLine"></span>
+            <!-- </div> -->
+          </button>
+
+        </nav>
+
+      </div>
+    </header>
+
+
+    <main class="site__body">
+      <div class="page container">
+        <div class="row">
+
+          <div class="page__sidebar col-12 col-lg-2">
+            <nav class="page__menu">
+              <a href="javascript:void(0);/#" class="pageMenu__item active">
+                Профиль
+              </a>
+              <a href="javascript:void(0);/#" class="pageMenu__item">
+                Мои заказы
+              </a>
+              <a href="javascript:void(0);/#" class="pageMenu__item">
+                выход
+              </a>
+            </nav>
+          </div>
+
+          <div class="page__body col-12 col-lg-10">
+
+            <div class="row">
+              <div class="col offset-lg-1">
+                <h1 class="page__title">
+                  Профиль
+                </h1>
+              </div>
+            </div>
+
+            <div class="page__content">
+
+              <div class="row">
+                <hr class="page__hr d-none d-lg-block">
+              </div>
+
+              <div class="row">
+                <div class="col col-lg-8 offset-lg-1">
+
+                  <form id="profile-form" action="" method="POST" class="page__form">
+
+                    <fieldset class="pageForm__section">
+                      <legend class="pageForm__sectionName">Данные профиля</legend>
+
+                      <div class="pageForm__item">
+                        <label for="userFullName" class="pageForm__label">
+                          ФИО
+                        </label>
+                        <input type="text" class="pageForm__input" name="user-full-name" id="userFullName"
+                          placeholder="Фамилия Имя Отчество" required minlength="2" maxlength="50">
+                        <span class="pageForm__message">
+                          Это обязательное поле
+                        </span>
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userEmail" class="pageForm__label">
+                          Почта
+                        </label>
+                        <input type="email" class="pageForm__input" name="user-email" id="userEmail"
+                          placeholder="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <span class="pageForm__message">
+                          Это обязательное поле
+                        </span>
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userPhone" class="pageForm__label">
+                          Телефон
+                        </label>
+                        <input type="tel" class="pageForm__input" name="user-phone" id="userPhone" data-tel-input
+                          placeholder="+7 (&nbsp;___&nbsp;)" maxlength="18" required>
+                        <span class="pageForm__message">
+                          Это обязательное поле
+                        </span>
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userNickname" class="pageForm__label">
+                          Имя аккаунта
+                        </label>
+                        <input type="text" class="pageForm__input" name="user-nickname" id="userNickname"
+                          placeholder="Nickname" minlength="2" maxlength="32" required>
+                        <span class="pageForm__message">
+                          Это обязательное поле
+                        </span>
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userInstagram" class="pageForm__label">
+                          Профиль в инстаграм
+                        </label>
+                        <input type="text" class="pageForm__input" name="user-instagram" id="userInstagram"
+                          placeholder="@instaname">
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userAddress" class="pageForm__label">
+                          Адрес доставки
+                        </label>
+                        <input type="text" class="pageForm__input" name="user-address" id="userAddress"
+                          placeholder="Город, улица, дом">
+                      </div>
+
+                    </fieldset>
+                  </form>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <hr class="page__hr">
+              </div>
+
+              <div class="row">
+                <div class="col col-lg-8 offset-lg-1">
+
+                  <form method="POST" class="page__form">
+
+                    <fieldset class="pageForm__section">
+
+                      <legend class="pageForm__sectionName">
+                        Изменить пароль
+                      </legend>
+
+                      <div class="pageForm__item">
+                        <label for="userOldPassword" class="pageForm__label">
+                          Старый пароль
+                        </label>
+                        <input type="password" class="pageForm__input" name="user-old-password" id="userOldPassword"
+                          placeholder="Введите текущий пароль" value="password">
+                        <button type="button" class="pageForm__iconButton js-password-toggler" role="button">
+                        </button>
+                      </div>
+
+                      <div class="pageForm__item">
+                        <label for="userNewPassword" class="pageForm__label">
+                          Новый пароль
+                        </label>
+                        <input type="password" class="pageForm__input" name="user-new-password" id="userNewPassword"
+                          placeholder="Введите новый пароль">
+                      </div>
+
+
+                    </fieldset>
+
+                  </form>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <hr class="page__hr">
+              </div>
+
+              <div class="row">
+                <div class="col-12 offset-lg-1">
+                  <button type="submit" class="pageForm__button ui-button" form="profile-form">
+                    Сохранить изменения
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <aside class="page__aside">
+            <header class="pageAside__header">
+              <h2 class="pageAside__title">
+                <span class="pageAside__titleText">
+                  Тренды
+                </span>
+                &nbsp;
+                <span class="pageAside__titleText">
+                  сезона
+                </span>
+              </h2>
+              <a href="javascript:void(0);/#" class="pageAside__link d-none d-lg-inline-flex">
+                Перейти в каталог
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/l-arrow-c.svg#icon-larrow"></use>
+                </svg>
+              </a>
+            </header>
+            <div class="pageAside__content">
+              <!-- Set up Owl Carousel -->
+              <div class="owl-carousel">
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #C08D74;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Акция! 1+1=3
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton active">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #EA976F;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #C07474;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Бесплатная доставка
+                            </span>
+                          </div>
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="productCard__body" style="border-color: #EA976F;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1800</span>
+                        <span class="productCard__oldPrice currency-rub"></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #C08D74;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #EA976F;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="carouselItem">
+                  <a href="javascript:void(0);/#" class="productCard">
+                    <div class="productCard__preview">
+                      <img src="../media/products/image 24.png" alt="product image" class="productCard__image">
+                      <div class="productCard__meta">
+
+                        <div class="productCard__badgeList">
+                          <div class="productCard__badge">
+                            <span class="productCard__badgeContent">
+                              Sale
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="productCard__favorite">
+                          <button class="productCard__likedButton js-likedButton">
+                            <svg class="ui-icon" height="24" width="24">
+                              <use xlink:href="images/icons/liked.svg#icon-liked"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="productCard__body" style="border-color: #C07474;">
+                      <div class="productCard__info">
+                        <h3 class="productCard__title">
+                          Brown to Blonde
+                        </h3>
+                        <p class="productCard__description">
+                          Пигмент для бровей
+                        </p>
+                        <span class="productCard__specs">
+                          12 ml.
+                        </span>
+                      </div>
+                      <div class="productCard__prices">
+                        <span class="productCard__price currency-rub">1500</span>
+                        <span class="productCard__oldPrice currency-rub">3000</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <a href="javascript:void(0);/#" class="pageAside__link d-lg-none mt-4">
+              Перейти в каталог
+              <svg class="ui-icon" height="16" width="16">
+                <use xlink:href="images/icons/l-arrow-c.svg#icon-larrow"></use>
+              </svg>
+            </a>
+          </aside>
+        </div>
+
+      </div>
+  </div>
+  </main>
+
+
+  <footer class="site__footer">
+    <div class=" siteFooter__navbar container">
+
+      <div class="row">
+
+        <section class="siteFooter__item col-12 col-md-4">
+          <h2 class="siteFooter__title ui-footerTitle">
+            <a class="siteFooter__titleLink" href="javascript:void(0);/#">Продукция</a>
+          </h2>
+          <nav class="siteFooter__menu">
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Пигменты
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Аппараты
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Иглы
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Расходные материалы
+            </a>
+          </nav>
+        </section>
+
+        <section class="siteFooter__item col-12 col-md-4">
+          <h2 class="siteFooter__title ui-footerTitle">
+            <a class="siteFooter__titleLink" href="javascript:void(0);/#">Компания</a>
+          </h2>
+          <nav class="siteFooter__menu">
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Блог
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Обучение
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Стать представителем
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Контакты
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem">
+              Политика конфиденциальности
+            </a>
+          </nav>
+        </section>
+
+        <section class="siteFooter__item col-12 col-md-4">
+          <h2 class="siteFooter__title ui-footerTitle">
+            <a class="siteFooter__titleLink" href="javascript:void(0);/#">Контакты</a>
+          </h2>
+          <nav class="siteFooter__menu">
+            <a href="tel:88005553535" class="siteFooter__menuItem siteFooter__menuItem--contact">
+              <span class="siteFooter__menuIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/phone-16.svg#icon-phone"></use>
+                </svg>
+              </span>
+              <span class="siteFooter__menuLabel">
+                8 (800) 555-35-35
+              </span>
+            </a>
+            <a href="mailto:cedro@yandex.ru" class="siteFooter__menuItem siteFooter__menuItem--contact" target="_blank">
+              <span class="siteFooter__menuIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/mail-16.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="siteFooter__menuLabel">
+                cedro@yandex.ru
+              </span>
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem siteFooter__menuItem--contact">
+              <span class="siteFooter__menuIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/clock-16.svg#icon-clock"></use>
+                </svg>
+              </span>
+              <span class="siteFooter__menuLabel">
+                Время работы: пн - пт с 10 до 19
+              </span>
+            </a>
+            <a href="javascript:void(0);/#" class="siteFooter__menuItem siteFooter__menuItem--contact">
+              <span class="siteFooter__menuIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/location-16.svg#icon-location"></use>
+                </svg>
+              </span>
+              <span class="siteFooter__menuLabel">
+                г. Санкт-Петербург,<br> м. Звездная
+              </span>
+            </a>
+          </nav>
+        </section>
+
+      </div>
+    </div>
+
+    <div class="siteFooter__infobar">
+      <div class="container">
+        <div class="row">
+
+          <div class="footerInfobar__item footerInfobar__item--social col-12 col-md-4">
+
+            <a href="javascript:void(0);/#" class="footerInfobar__socialLink">
+              <svg class="ui-icon" height="16" width="16">
+                <use xlink:href="images/icons/social-vk.svg#icon-vk"></use>
+              </svg>
+            </a>
+
+            <a href="javascript:void(0);/#" class="footerInfobar__socialLink">
+              <svg class="ui-icon" height="16" width="16">
+                <use xlink:href="images/icons/social-fb.svg#icon-fb"></use>
+              </svg>
+            </a>
+
+            <a href="javascript:void(0);/#" class="footerInfobar__socialLink">
+              <svg class="ui-icon" height="16" width="16">
+                <use xlink:href="images/icons/social-ig.svg#icon-ig"></use>
+              </svg>
+            </a>
+
+          </div>
+
+          <div class="footerInfobar__item footerInfobar__item--copyright col-12 col-md-4">
+            <a href="javascript:void(0);/#" class="footerInfobar__link">
+              © Cedro — все права защищены, 2020
+            </a>
+          </div>
+
+          <div class="footerInfobar__item footerInfobar__item--createdBy col-12 col-md-4">
+            <a href="javascript:void(0);/#" class="footerInfobar__link">
+              Сделано в Cedro
+              <svg class="ui-icon" height="16" width="16">
+                <use xlink:href="images/icons/Cedro_pictogram.svg#icon-cedro"></use>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="siteFooter__lawbar container">
+      <p class="lawbar__text">
+        Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при
+        каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса
+        Российской Федерации. Для получения подробной информации о наличии и актуальной стоимости указанных на сайте
+        услуг обращайтесь, пожалуйста, по телефонам клиник.
+      </p>
+    </div>
+  </footer>
+
+  <!-- OVERLAYS -->
+  <div class="site__menu js-menu">
+    <div class="container">
+
+      <div class="row">
+
+        <section class="siteMenu__part col-12 col-md-4">
+          <h2 class="siteMenu__title ui-footerTitle">
+            <a class="siteMenu__titleLink" href="javascript:void(0);/#">Продукция</a>
+          </h2>
+          <nav class="siteMenu__list">
+            <a href="javascript:void(0);/#" class="siteMenu__item" tabindex="-1">
+              Пигменты
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Аппараты
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Иглы
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Расходные материалы
+            </a>
+          </nav>
+        </section>
+
+        <section class="siteMenu__part col-12 col-md-4">
+          <h2 class="siteMenu__title ui-footerTitle">
+            <a class="siteMenu__titleLink" href="javascript:void(0);/#">Компания</a>
+          </h2>
+          <nav class="siteMenu__list">
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Блог
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Обучение
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Стать представителем
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Контакты
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item">
+              Политика конфиденциальности
+            </a>
+          </nav>
+        </section>
+
+        <section class="siteMenu__part col-12 col-md-4">
+          <h2 class="siteMenu__title ui-footerTitle">
+            <a class="siteMenu__titleLink" href="javascript:void(0);/#">Контакты</a>
+          </h2>
+          <nav class="siteMenu__list">
+            <a href="tel:88005553535" class="siteMenu__item siteMenu__item--contact">
+              <span class="siteMenu__itemIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/phone-16.svg#icon-phone"></use>
+                </svg>
+              </span>
+              <span class="siteMenu__itemLabel">
+                8 (800) 555-35-35
+              </span>
+            </a>
+            <a href="mailto:cedro@yandex.ru" class="siteMenu__item siteMenu__item--contact" target="_blank">
+              <span class="siteMenu__itemIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/mail-16.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="siteMenu__itemLabel">
+                cedro@yandex.ru
+              </span>
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item siteMenu__item--contact">
+              <span class="siteMenu__itemIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/clock-16.svg#icon-clock"></use>
+                </svg>
+              </span>
+              <span class="siteMenu__itemLabel">
+                Время работы: пн - пт с 10 до 19      
+              </span>
+            </a>
+            <a href="javascript:void(0);/#" class="siteMenu__item siteMenu__item--contact">
+              <span class="siteMenu__itemIcon">
+                <svg class="ui-icon" height="16" width="16">
+                  <use xlink:href="images/icons/location-16.svg#icon-location"></use>
+                </svg>
+              </span>
+              <span class="siteMenu__itemLabel">
+                г. Санкт-Петербург,<br> м. Звездная
+              </span>
+            </a>
+          </nav>
+        </section>
+      </div>
+    </div>
+
+  </div><!-- /.site__menu -->
+
+  </div><!-- /.site -->
+</body>
+
+
+</html>
